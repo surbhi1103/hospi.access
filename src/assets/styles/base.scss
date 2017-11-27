@@ -1,0 +1,14 @@
+$navbar-default-bg: #312312;
+$light-orange: #ff8c00;
+$navbar-default-color: $light-orange;
+
+//importing the bootstrap library
+
+// Import custom Bootstrap variables
+// @import "bootstrap-variables";
+
+// @import 'bootstrap';
+// @import "bootstrap/theme";
+
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap"
+

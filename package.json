@@ -1,0 +1,55 @@
+{
+  "name": "hospiaccess",
+  "version": "1.0.0",
+  "description": "Hospital Access",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surbhi1103/hospiaccess.git"
+  },
+  "author": "Surbhi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/surbhi1103/hospiaccess/issues"
+  },
+  "homepage": "https://github.com/surbhi1103/hospiaccess#readme",
+  "dependencies": {
+    "css-element-queries": "~0.4.0",
+    "lazysizes": "~4.0.1",
+    "ncu": "^0.2.1",
+    "prismjs": "~1.8.4",
+    "smooth-scroll": "github:cferdinandi/smooth-scroll",
+    "waypoints": "~4.0.0",
+    "what-input": "~5.0.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "~7.1.6",
+    "bootstrap-sass": "^3.3.7",
+    "browser-sync": "~2.18.13",
+    "css-mqpacker": "~6.0.1",
+    "del": "~3.0.0",
+    "gulp": "~3.9.1",
+    "gulp-cssnano": "~2.1.2",
+    "gulp-imagemin": "~4.0.0",
+    "gulp-inline-source": "~3.1.0",
+    "gulp-jshint": "~2.0.0",
+    "gulp-notify": "~3.0.0",
+    "gulp-plumber": "~1.1.0",
+    "gulp-postcss": "~7.0.0",
+    "gulp-replace": "~0.6.1",
+    "gulp-sass": "~3.1.0",
+    "gulp-sass-glob": "~1.0.6",
+    "gulp-sourcemaps": "~2.6.1",
+    "gulp-trim": "~1.0.2",
+    "gulp-twig": "~1.1.1",
+    "gulp-uglify": "~3.0.0",
+    "jshint": "~2.9.1",
+    "jshint-stylish": "~2.2.1",
+    "postcss-merge-longhand": "~3.0.0",
+    "run-sequence": "~2.2.0",
+    "webpack-stream": "~4.0.0"
+  }
+}
