@@ -108,10 +108,7 @@ body {
   .navbar-wrapper {
     margin-top: 20px;
   }
-  .navbar-wrapper .container {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
+
   .navbar-wrapper .navbar {
     padding-right: 0;
     padding-left: 0;
@@ -145,21 +142,38 @@ body {
 }
 
 .code-of-conduct{
-  background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==);
   color: white;
+  background: url(../images/slideshow_image2.jpg) 100% no-repeat;
+  background-size: 100%;
 }
 
 .services {
-  background: url(../imagea/slideshow_image2.jpg) 100% no-repeat;
+  background: url(../images/blue_room.jpg) 100% no-repeat;
   background-size: 100%;
   color: white;
 }
 
-.jumbotron.first-block{
-  background: url(../imagea/slideshow_image1.jpg) 100% no-repeat;
+.jumbotron {
+  .container{
+    h1{
+      text-shadow: 1px 1px 2px black; 
+    }
+  }
+  border-radius: 0 !important;
+}
+
+.jumbotron.first-block {
+  background: url(../images/slideshow_image1.jpg) 100% no-repeat;
   background-size: 100%;
+
+  .container {
+    text-align: center;
+  }
+
   h1 {
-    color: #cca035;
+    color: white;
+    text-shadow: 1px 1px 2px black; 
+    margin-top: 150px;
   }
   small {
     color: #5A5A5A;
@@ -183,28 +197,41 @@ body {
     line-height: 1;
     letter-spacing: -1px;
     font-size: 50px;
-    margin-top: 120px;
+    margin-top: 50px;
   }
 }
 
 .navbar {
   border: none;
+  margin: 0;
   .container {
-    background-color: #0E2F56;
+    background-color: #fff;
     border: none;
   }
 }
 
 .navbar-brand {
-    padding-bottom: 80px;
+  padding: 0;
 }
 
-.navbar-wrapper .container{
-  padding: 0 !important;
+.navbar-wrapper {
+  margin-top: 0 !important;
+  .container{
+    padding: 10px 15px 10px 15px !important;
+  }
 }
 
 @media (min-width: 1200px){
   .container {
     width: 100%;
   }
+
+  .jumbotron.first-block {
+    height: 100vh;
+  }
+
+}
+
+.btn-lg{
+  border-radius: 0;
 }
