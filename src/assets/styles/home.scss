@@ -142,7 +142,6 @@ body {
 
 .hero-small {
   color: #2e6da4;
-  font-style: italic;
 }
 
 .code-of-conduct{
@@ -151,21 +150,22 @@ body {
 }
 
 .services {
-  background: url(/assets/images/slideshow_image2.jpg) 100% no-repeat;
+  background: url(../imagea/slideshow_image2.jpg) 100% no-repeat;
   background-size: 100%;
   color: white;
 }
 
 .jumbotron.first-block{
+  background: url(../imagea/slideshow_image1.jpg) 100% no-repeat;
+  background-size: 100%;
   h1 {
     color: #cca035;
   }
   small {
     color: #5A5A5A;
-    font-style: italic;
-    font-family: 'Tangerine';
+    // font-style: italic;
+    // font-family: 'Tangerine';
     text-align: center;
-    font-size: 60px;  
   }
 }
 
@@ -184,5 +184,27 @@ body {
     letter-spacing: -1px;
     font-size: 50px;
     margin-top: 120px;
+  }
+}
+
+.navbar {
+  border: none;
+  .container {
+    background-color: #0E2F56;
+    border: none;
+  }
+}
+
+.navbar-brand {
+    padding-bottom: 80px;
+}
+
+.navbar-wrapper .container{
+  padding: 0 !important;
+}
+
+@media (min-width: 1200px){
+  .container {
+    width: 100%;
   }
 }
