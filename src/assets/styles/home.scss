@@ -184,7 +184,7 @@ body {
 }
 
 .hospi-access-color{
-  color: #cca035 !important;
+  color: #138EEF !important;
 }
 
 .center-align {
@@ -234,4 +234,16 @@ body {
 
 .btn-lg{
   border-radius: 0;
+}
+
+.navbar-toggle{
+  background-color: #138EEF;
+  border-radius: 0;
+  .icon-bar {
+    background-color: white;
+  }
+}
+
+button {
+  background-color: #138EEF;
 }
