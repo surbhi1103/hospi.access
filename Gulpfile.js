@@ -28,9 +28,9 @@ var webpack         = require('webpack-stream');
   --------------------
 */
 
-// Cleans out the `dist` directory
-gulp.task('clean:dist', function() {
-  return del(['./dist/**/*']);
+// Cleans out the `docs` directory
+gulp.task('clean:docs', function() {
+  return del(['./docs/**/*']);
 });
 
 // Keep those .DS_Store files at bay
@@ -55,14 +55,14 @@ gulp.task('images:files', function() {
     .pipe(imagemin({
       progressive: true
     }))
-    .pipe(gulp.dest('./dist/assets/images'));
+    .pipe(gulp.dest('./docs/assets/images'));
 });
 
 gulp.task('images:other', function() {
   return gulp.src([
       './src/assets/images/**/*.{xml,json,mp4,webm}'
     ])
-    .pipe(gulp.dest('./dist/assets/images'));
+    .pipe(gulp.dest('./docs/assets/images'));
 });
 
 gulp.task('images', ['images:files', 'images:other']);
@@ -84,9 +84,9 @@ gulp.task('markup:html', function () {
       errorHandler: notify.onError("Error: <%= error.message %>")
     }))
     .pipe(inlinesource({
-      rootpath: './dist'
+      rootpath: './docs'
     }))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./docs'));
 });
 
 gulp.task('markup', function(callback) {
@@ -104,7 +104,7 @@ gulp.task('media', function() {
   return gulp.src([
       './src/assets/media/**/*'
     ])
-    .pipe(gulp.dest('./dist/assets/media'));
+    .pipe(gulp.dest('./docs/assets/media'));
 });
 
 
@@ -150,7 +150,7 @@ gulp.task('scripts:build', function() {
         filename: '[name].js',
       }
     }))
-    .pipe(gulp.dest('./dist/assets/scripts'));
+    .pipe(gulp.dest('./docs/assets/scripts'));
 });
 
 gulp.task('scripts:move', function() {
@@ -162,7 +162,7 @@ gulp.task('scripts:move', function() {
       errorHandler: notify.onError("Error: <%= error.message %>")
     }))
     .pipe(uglify())
-    .pipe(gulp.dest('./dist/assets/scripts'));
+    .pipe(gulp.dest('./docs/assets/scripts'));
 });
 
 gulp.task('scripts:vendor', function() {
@@ -173,7 +173,7 @@ gulp.task('scripts:vendor', function() {
       errorHandler: notify.onError("Error: <%= error.message %>")
     }))
     .pipe(uglify())
-    .pipe(gulp.dest('./dist/assets/scripts/vendor'));
+    .pipe(gulp.dest('./docs/assets/scripts/vendor'));
 });
 
 gulp.task('scripts', [
@@ -223,7 +223,7 @@ gulp.task('styles:main', function() {
       zindex: false
     }))
     .pipe(sourcemaps.write('maps'))
-    .pipe(gulp.dest('./dist/assets/styles'))
+    .pipe(gulp.dest('./docs/assets/styles'))
     .pipe(browserSync.stream());
 });
 
@@ -242,7 +242,7 @@ gulp.task('styles:home', function() {
       zindex: false
     }))
     .pipe(sourcemaps.write('maps'))
-    .pipe(gulp.dest('./dist/assets/styles'))
+    .pipe(gulp.dest('./docs/assets/styles'))
     .pipe(browserSync.stream());
 });
 
@@ -254,7 +254,7 @@ gulp.task('styles:vendor', function() {
       errorHandler: notify.onError("Error: <%= error.message %>")
     }))
     .pipe(nano())
-    .pipe(gulp.dest('./dist/assets/styles/vendor'))
+    .pipe(gulp.dest('./docs/assets/styles/vendor'))
     .pipe(browserSync.stream());
 });
 
@@ -269,7 +269,7 @@ gulp.task('styles', ['styles:main', 'styles:home', 'styles:vendor']);
 
 gulp.task('default', function(callback) {
   runSequence(
-    'clean:dist',
+    'clean:docs',
     'clean:dsstore',
     [
       'images',
@@ -281,7 +281,7 @@ gulp.task('default', function(callback) {
     function() {
       browserSync.init({
         server: {
-          baseDir: './dist'
+          baseDir: './docs'
         }
       });
 
