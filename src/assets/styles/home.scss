@@ -248,5 +248,9 @@ button {
 }
 
 .active {
-  background-color: #eee;
+  background-color: #d3d3d3;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+  background-color: #d3d3d3;
 }
